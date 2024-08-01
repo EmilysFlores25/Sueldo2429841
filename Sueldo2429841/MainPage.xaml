@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewsModels="clr-namespace:Sueldo2429841.ViewsModels"
+             x:Class="Sueldo2429841.MainPage">
+
+    <ContentPage.BindingContext>
+        <ViewsModels:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Entry Text="{Binding SueldoActual}" Placeholder="Ingrese sueldo actual" Keyboard="Numeric" Margin="10"></Entry>
+        <Button Text="Calcular" Command="{Binding AumentoCommand}" Margin="10"></Button>
+        <Entry Text="{Binding R}" Placeholder="El sueldo con aumento es: " Margin="10"/>
+    </StackLayout>
+</ContentPage>
